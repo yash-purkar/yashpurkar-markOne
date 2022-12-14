@@ -42,6 +42,17 @@ var qAn = [
   {
     question: "Which Company's laptop Am I Using? ",
     answer: "hp"
+  },
+  {
+    question: "Which is my dream company? ",
+    answer: "tcs"
+  },
+  {
+    question: "Which is my favoutite car? ",
+    answer: "harrier"
+  }, {
+    question: " What Am I pursuing? ",
+    answer: "bca"
   }
 ]
 
@@ -52,7 +63,7 @@ for (var i = 0; i < qAn.length; i++) {
 // play(qAn[1].question, qAn[1].answer)
 
 if (score > 0) {
-  console.log("Congratulation You Scored💥🤩 : " + score + "/5")
+  console.log("Congratulation You Scored💥🤩 : " + score + "/8")
 } else {
-  console.log("You Need To Know Me More Your Score Is : " + score + "/5")
+  console.log("You Need To Know Me More Your Score Is : " + score + "/8")
 }
