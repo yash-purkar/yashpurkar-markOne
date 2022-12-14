@@ -1,6 +1,9 @@
-var readlineSync = require('readline-sync')
-var userName = readlineSync.question("What's Your Name? ");
-console.log("Welcome", userName, "to DO YOU KNOW yash.. \n")
+var readlineSync = require('readline-sync');
+var chalk = require('chalk');
+// console.log(chalk.red("checking chalk"));
+
+var userName = readlineSync.question(chalk.blue.bold("What's Your Name? "));
+console.log(chalk.magenta.bold("Welcome", userName, "to DO YOU KNOW yash.. \n"));
 
 var score = 0;
 
@@ -8,14 +11,14 @@ function play(question, answer) {
   var userAns = readlineSync.question(question)
 
   if (userAns.toUpperCase() === answer.toUpperCase()) {
-    console.log("You Are Right ")
+    console.log(chalk.green.bold("You Are Right🤩 "))
     score += 1;
   }
   else {
-    console.log("You Are Wrong ")
+    console.log(chalk.red.bold("You Are Wrong! "));
   }
-  console.log("Current Score : ", score)
-  console.log("_______________________")
+  console.log(chalk.yellow.bold("Current Score : ", score));
+  console.log("_______________________\n")
 
 }
 
@@ -60,10 +63,9 @@ for (var i = 0; i < qAn.length; i++) {
   currQue = qAn[i];
   play(currQue.question, currQue.answer)
 }
-// play(qAn[1].question, qAn[1].answer)
 
 if (score > 0) {
-  console.log("Congratulation You Scored💥🤩 : " + score + "/8")
+  console.log(chalk.cyan.bold("Congratulation You Scored💥🤩 : " + score + "/8"));
 } else {
-  console.log("You Need To Know Me More Your Score Is : " + score + "/8")
+  console.log(chalk.red.bold("You Need To Know Me More Your Score Is : " + score + "/8"));
 }
